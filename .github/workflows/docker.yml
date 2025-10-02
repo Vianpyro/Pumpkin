@@ -70,7 +70,7 @@ jobs:
             type=raw,value=${{ env.PUMPKIN_VERSION }}
             type=raw,value=mc${{ env.MC_VERSION }}-${{ env.PUMPKIN_VERSION }}
 
-      - name: Set up Docker Buildx
+      - name: Docker Buildx
         if: steps.repo_check.outputs.should_deploy == 'true'
         uses: docker/setup-buildx-action@v3
 
